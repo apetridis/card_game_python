@@ -270,7 +270,7 @@ class GUIGame(Game, GUI)  :
             scores = pickle.load(f)
         scores = sorted(scores, key=lambda x: (x['wins'] / (x['wins'] + x['losses']), x['wins'] + x['losses']), reverse = True)
         highscores = tk.Toplevel()
-        highscores.title = 'Οι 5 καλύτεροι παίχτες'
+        highscores.title("Οι 5 καλύτεροι παίχτες")
         highscores.focus()
         for i in range(min(5, len(scores))):
             record = tk.StringVar()
